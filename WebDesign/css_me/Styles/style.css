@@ -1,0 +1,124 @@
+@font-face{
+
+	font-family: YoungSerif;
+	src:url(../Fonts/YoungSerif/YoungSerif-Regular.ttf);
+}
+
+body{
+
+	background: linear-gradient(90deg, rgba(173,184,255,100) 40%, rgba(108,224,240,94) 100%);
+	clear:both;
+	text-align: left;
+
+  font-family: YoungSerif;
+  font-size: 20px;
+}
+
+#cloth:hover{
+	fill:#353535;
+}
+
+#face:hover{
+	fill:#ffbcab;
+}
+
+
+#cloth:active{
+
+		fill:grey;
+	}
+
+#face:active{
+
+		fill:#ffa28a;
+	}
+
+#Claire{
+	color: purple;
+  text-align: left;
+ }
+
+#Academic{
+	color: purple;
+  text-align: left;
+}
+
+#Infographic{
+	color: purple;
+  text-align: left;
+}
+
+
+p1{
+	text-align: right;
+}
+
+ul{
+	text-align: left;
+}
+
+footer{
+	text-align: left;
+}
+
+a{
+
+background-color: transparent;
+text-decoration: none;
+color:black;
+
+}
+
+a:visited {
+
+color: black;
+}
+
+ a:hover {
+
+font-size: 25px;
+color: hotpink;
+}
+
+a:active {
+
+color: darkblue;
+}
+
+footer{
+	margin:2%;
+}
+
+.image1{
+
+	border-radius: 200px;
+	border: 8px dashed mediumpurple;
+	margin-left:3%; 
+}
+
+.image2{
+	border-radius: 150px;
+	border: 8px dashed whitesmoke;
+	float:right;
+  margin-left:10%; 
+	margin-right:10%;
+}
+
+.image3{
+	border-radius: 30px;
+	border: 8px dashed mediumpurple;
+}
+
+.image4{
+	border-radius: 30px;
+	border: 8px dashed lightgoldenrodyellow;
+	float:right;
+	margin:4%;
+}
+
+.image5{
+	border: 8px dashed whitesmoke;
+  margin-left:22.5%; 
+	margin-right:22.5%;
+}
+

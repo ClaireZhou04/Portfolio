@@ -1,0 +1,15 @@
+
+Name: Xinyao Zhou
+Address: 5 University PL
+Email: clairezhoucn@gmail.com
+Phone: 6468586117
+ZIP Code: 10003
+T-Shirt Quantity: 1
+Jeans Quantity: 0
+Subtotal: 35
+Shipping: Will-Call
+Shipping Cost: 0
+Grand Total: 35
+Payment Info: Credit Card ending in 7890
+
+

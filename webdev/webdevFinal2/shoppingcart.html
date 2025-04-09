@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping Cart</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/slick.css"/>
+        <link rel="stylesheet" href="css/shoppingcart.css"/>
+        <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Cara's Bookstore</h1>
+            <p>Thank you for supporting my business!!</p>
+        </header>
+    
+        <main>
+            <!--Provide a unique name attribute for all form elements (e.g., name="email") to ensure compatibility with server-side programming-->
+            <div id="shoppingCartPage">
+                <h2>Shopping Cart</h2>
+                <form id="shoppingCartForm">
+                    <!--Select: For selecting product options.-->
+                    <!--Include at least two products, each with: An image, A price, A field to enter the quantity to order-->
+                    <div class="form-group">
+                        <label for="genrefilter">Select a Genre:</label>
+                        <select name="genre" id="genrefilter" class="form-control">
+                            <option value="" selected disabled>Select a genre</option>
+                            <option value="all">All</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="nonfiction">Non-fiction</option>
+                            <option value="youngadult">Young Adult</option>
+                        </select>
+                    </div>
+                    <div id="booklist"></div>
+                    <ul id="cartitems"></ul>
+        
+                    <div class="form-group">
+                        <label for="subtotal">Total Price:</label>
+                        <input type="number" name="subtotal" id="subtotal" class="form-control" placeholder="0" readonly>
+                    </div>
+        
+                    <textarea id="result" class="output-box" rows="4" readonly placeholder="Result"></textarea>
+                    <button id="placeorder">Checkout</button>
+                </form>
+            </div>
+
+        <!--Text: For customer name, address, phone number, and credit card information.-->
+        <div id="checkoutPage" class="hidden">
+            <button id="back">Back to Cart</button>
+            <br>
+            <h2 id="checkouth2">Checkout</h2>
+            <p style="text-align: center;">Fill out this form to place your order!</p>
+            <div id="order"></div>
+        
+            <form id="checkoutForm" action="#">
+
+                <h3>Customer Information</h3>
+                <label>Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" autocomplete="given-name">
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" autocomplete="family-name">
+
+                <div class="form-group">
+                    <label>Address:</label>
+                    <input type="text" name="street" class="form-control" id="street" placeholder="Address">
+                    <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                    <input type="text" name="state" class="form-control" id="state" placeholder="State" autocomplete="state">
+                    <input type="text" name="zip" class="form-control" id="zip" placeholder="Zip" minlength="5" maxlength="5">
+                    <input type="text" name="country" class="form-control" id="country" placeholder="Country" autocomplete="country">
+                </div>
+                  
+                <!--Email: For capturing customer email-->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="email@email.com" autocomplete="on">
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="000-000-0000" minlength="10" autocomplete="phone">
+                
+                <div id="discount-section" class="form-group">
+                    <h3>Apply Discount Code</h3>
+                    <label for="discount-code">Discount Code:</label>
+                    <input type="text" id="discount-code" placeholder="Enter discount code">
+                    <button type="button" id="apply-discount" class="btn btn-primary">Apply</button>
+                    <p id="discount-message"></p>
+                </div>
+    
+                <!--Use a field to capture customer credit card information, ensuring its validation and masking in the receipt-->
+                <h3>Payment Information</h3>
+                <div class="radio-group">
+                    <label>Credit Card:</label>
+                    <input name="creditCard" type="radio" value="Amex" checked> AMEX
+                    <input name="creditCard" type="radio" value="Visa"> Visa
+                    <input name="creditCard" type="radio" value="Other"> Other
+                </div>
+
+                <input type="text" id="cardname" name="cardname" placeholder="Name on Card">
+                <input type="text" id="cardnumber" name="cardnumber" minlength="15" maxlength="19" placeholder="Card Number">
+                <input type="month" id="expiration" name="expiration" placeholder="Expiration">
+                <input type="text" id="securitycode" name="securitycode" minlength="3" maxlength="5" placeholder="CVV">
+
+                <!--Radio Buttons: To select the shipping method (e.g., "Will-Call" or "Shipping")-->
+                <!--Include a shipping method with corresponding shipping costs-->
+                <div class="form-group" id="shipping">
+                    <h3>Shipping Method</h3>
+                    <label><input type="radio" name="shipping" value="In-Store Pickup" checked> In-Store Pickup ($0)</label><br>
+                    <label><input type="radio" name="shipping" value="Shipping"> Shipping ($5)</label><br>
+                </div>
+                <h2>Order Summary</h2>
+                <div id="ordersummary"></div>
+        
+                <!--Submit and Reset buttons-->
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+        <div id="recepit"></div>
+    </main>
+
+    
+        <script src="js/shoppingcart.js"></script>
+    </body>
+        
+</html>

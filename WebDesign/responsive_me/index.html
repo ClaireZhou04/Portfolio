@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Website Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" type="text/css" href="./Styles/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .tv {
+      width: 40%;
+      float: left;
+    }
+
+    .tv img {
+      display: block;
+      width: 60%;
+
+    }
+
+    .phone {
+      float: left;
+      width: 40%;
+    }
+
+    .phone img {
+      display: block;
+      width: 60%;
+
+    }
+
+    @media screen and (max-width: 768px) {
+      .tv {
+        width: 100%;
+      }
+
+      .tv img {
+        width: 85%;
+      }
+
+      .phone {
+        width: 100%;
+      }
+
+      .phone img {
+        width: 85%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <ul>
+    <header>
+      <h1 class="header">The Voice Of Media</h1>
+    </header>
+    <main>
+      <main class="x1">
+        <article class="poster">
+          <img class="i1" width='41%' height='auto' alt='A poster about technology change' src="./Images/poster.jpg">
+          <img class="i2" width='33%' height='auto' alt='A poster about electronic devices' src="./Images/poster2.jpg">
+          <img class="i3" width='18%' height='auto' alt='A poster about media' src="./Images/poster3.png">
+
+        </article>
+
+        <div class="intro">
+
+          <p>In this website, we will focus on the influence of media and technology on society and people’s
+            perceptions. We will deepen our understanding of media through the following articles.
+            <p></p>
+          </p>
+
+          <div class="media">
+
+            <a href="./Pages/Media.html">
+              <li>The Media Is The Message</li>
+            </a>
+          </div>
+          <div class="tools">
+            <p></p>
+            <a href="./Pages/Tools.html">
+              <li>How Does Tools Shape The Hand</li>
+            </a>
+          </div>
+          <div class="tv">
+            <p>Click to view the history of TV</p>
+            <a href="https://en.wikipedia.org/wiki/History_of_television"><img width='80%' height='auto'
+                alt='An old phone' srcset="./Images/old_tv3.png 480w,
+                ./Images/old_tv2.png 960w,
+                ./Images/old_tv.png 1280w,
+                "></a>
+          </div>
+          <div class="phone">
+            <p>Click to view the history of phone</p>
+            <a href="https://www.elon.edu/u/imagining/time-capsule/150-years/back-1870-1940/"><img width='35%'
+                height='auto' alt='An old phone' srcset="./Images/old_phone3.png 480w,
+                ./Images/old_phone2.png 960w,
+                ./Images/old_phone.png  1280w,
+                "></a>
+          </div>
+        </div>
+
+
+      </main>
+  </ul>
+  <footer>
+
+    <a href="../index.html">
+      <li>Back to Home page</li>
+    </a>
+  </footer>
+</body>
+
+</html>

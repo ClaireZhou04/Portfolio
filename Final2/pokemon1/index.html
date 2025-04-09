@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <title>Pokemon Game 1</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>Claire's Little Garden</h1>
+<audio id="bg-music" src="../images/bg.mp3" loop></audio>
+    <div id="music-toggle">
+      <img id="toggle-btn" src="../images/voice1.png" alt="Toggle Music">
+    </div>
+<div id="left">
+<img width=74% src="./images/background.png">
+<img id="g1" src="./images/grass.png">
+<img id="g2" src="./images/grass.png">
+<img id="g3" src="./images/grass.png">
+
+
+
+</div>
+
+<div id="right">
+<h2>Gotta Catch 'em All!</h2>
+<p>Your goal is to catch as many Pokemons as possible!</p>
+
+    <p>To play simply click on one of the three grass clumps in the forest.</p>
+    
+    <p>Each time you pick a grass you will be using one of your Pokeballs, and when you run out the game will be over!</p>
+    
+    <h3 id="progress">Your Progress so far ...</h3>
+    
+    <p>Pokeballs left: <span id="chances_left">5</span></p>
+    
+    <p>Pokemon caught: <span id="caught">0</span></p> 
+
+    <button id="play_again">Play Again</button>
+    </br>
+    
+    <p>History</p>
+    <p id="history"></p>
+    
+    <button id="clean">Clean Record</button>
+    <p></p>
+    <p></p>
+    <button id="Restart">Start Over</button>
+</div>
+<button class="back-button" onclick="location.href='../index.html'">Back to Garden</button>
+<script src="macro3.js"></script>
+</body>
+<footer>Produced by Claire Zhou</footer>
+</html>

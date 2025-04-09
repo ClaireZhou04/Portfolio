@@ -1,0 +1,167 @@
+
+.book {
+    width: 250px; 
+    padding: 10px;
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.book img {
+    width: 100%; 
+    height: auto; 
+}
+
+main{
+    position:absolute;
+    top:10%;
+    margin-left: 80px;
+}
+.book h3 {
+    font-size: 1em;
+    margin: 10px 0 5px;
+}
+
+.book p {
+    font-size: 0.9em; 
+    margin: 5px 0;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+    justify-content: left;
+}
+
+.back-btn {
+    position:absolute;
+    bottom:-50%;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #890303e1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    color: white;
+    background-color: #3c0000e1;
+}
+
+
+
+#booklist {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 15px;
+margin-top: 15px;
+margin-bottom: 25px;
+}
+
+.book {
+background-color: #fff;
+padding: 20px;
+padding-bottom: 40px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+text-align: center;
+transition: transform 0.3s;
+}
+
+.book:hover {
+transform: translateY(-10px);
+}
+
+.book img {
+width: 100%;
+max-width: 150px;
+height: auto;
+margin-bottom: 5px;
+}
+
+.book h3 {
+font-size: 15px;
+margin-bottom: 10px;
+}
+
+.book p {
+font-size: 15px;
+margin-bottom: 10px;
+}
+
+.book button {
+width: 80%;
+height:12%;
+background-color: #630000e1;
+color: white;
+font-size: 17px;
+transition: background-color 0.3s;
+}
+
+.book button:hover {
+background-color: #3d3838;
+}
+
+.book button:active {
+background-color: #0a0000;
+}
+
+#cartitems {
+list-style: none;
+padding: 0;
+}
+
+.cart-item {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+background-color: #f9f9f9;
+margin-bottom: 10px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+width: 60px;
+height: 80px;
+margin-right: 10px;
+margin-left: 5px;
+}
+
+.cart-item span {
+flex-grow: 1;
+margin-left: 7px;
+margin-right: 7px;
+
+}
+
+.cart-item button {
+background-color: #3a0c11;
+color: white;
+font-size: 13px;
+padding: 10px 15px;
+border: none;
+border-radius: 4px;
+margin-left: 7px;
+margin-right: 5px;
+
+}
+
+.cart-item button:hover {
+background-color: #5f272e;
+}
+
+.cart-item input {
+width: 60px;
+padding: 7px;
+text-align: center;
+}
+
+.hidden {
+display: none;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Chinese Sentence Generator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Yuji+Mai&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="api.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>Claire's Little Garden</h1>
+    <audio id="bg-music" src="../images/bg.mp3" loop></audio>
+    <div id="music-toggle">
+      <img id="toggle-btn" src="../images/voice1.png" alt="Toggle Music">
+    </div>
+    <div class="container">
+        <h2>Random Sentence Generator</h2>
+        <button id="generate-btn">Generate Sentence</button>
+        <div id="sentence-display">
+            <p id="sentence"></p>
+        </div>
+        <div id="history">
+            <h2>History</h2>
+            <ul id="history-list"></ul>
+            <button id="clear-history-btn">Clear History</button>
+        </div>
+    </div>
+    <button class="back-button" onclick="location.href='../index.html'">Back to Garden</button>
+</body>
+<footer>Produced by Claire Zhou</footer>
+
+<script src="api.js"></script>
+</html>

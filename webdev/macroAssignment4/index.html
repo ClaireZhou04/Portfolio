@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matching Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="start-screen">
+    <h1>Memory Maching Madness!</h1>
+    <h2>Play a fast-paced game of "memory" and try to beat your best time!</h2>
+
+    <div id="difficulty-selection-screen">
+        <h2>Select Difficulty</h2>
+        
+        <button id="easy-btn">Easy (3x4)</button>
+        <button id="medium-btn">Medium (4x5)</button>
+        <button id="hard-btn">Hard (5x6)</button>
+      </div>
+  </div>
+
+
+  <div id="game-screen" class="hidden">
+    <h1>Ready, Set, Match!</h1>
+    <p id="timer">Time: 0</p>
+    <div id="game-board"></div>
+  </div>
+
+  <div id="game-over-screen" class="hidden">
+    <h2>Game Over!</h2>
+    <button id="restart-btn">Play Again</button>
+    <p>Time: <span id="final-time">0</span> seconds</p>
+    <p>Best Time: <span id="best-time">
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+body {
+  font-family: "DynaPuff", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+}
+
+h1{
+  position: absolute;
+  color:orange;
+  top:10px;
+  font-size:50px;
+}
+
+@media (max-width: 1024px) {
+.scene {
+  width: 150px;
+  height: 150px;
+}
+}
+
+@media (max-width: 480px) {
+.scene {
+  width: 120px;
+  height: 120px;
+}
+}
+
+
+img{
+    position: absolute;
+    top:0%;
+   min-height: 100%;
+   width:100%;
+}
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 800px;
+}
+
+.box1, .box2, .box3, .box4 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0 75px 130.5px;
+  border-style: solid;
+  top:40%;
+}
+.tofu {
+  position: absolute;
+  top:35%;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center center 29px;
+  animation: rotateTofu 3s infinite linear;
+  transition: transform 2s ease-in-out ;
+}
+
+.tofu2 div{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0 75px 130.5px;
+  border-style: solid;
+
+}
+
+.left-ear{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  top:-80%;
+}
+
+.right-ear{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;  
+  top:-120%  
+}
+
+
+
+.box1 {
+  border-color: transparent transparent rgb(193, 127, 56);
+  transform-origin: center bottom;
+  transform: translateX(50px) translateY(50px) rotateX(-90deg);
+}
+.box2 {
+  border-color: transparent transparent rgb(241, 204, 162);
+  transform-origin: center bottom;
+  transform: translateX(50px) translateY(50px) rotateX(-19.5deg);
+}
+.box3 {
+  border-color: transparent transparent rgb(255, 195, 131);
+  transform-origin: right bottom;
+  transform: translateX(50px) translateY(50px) rotateY(60deg) rotateX(19.5deg);
+}
+.box4 {
+  border-color: transparent transparent rgb(217, 156, 92);
+  transform-origin: left bottom;
+  transform: translateX(50px) translateY(50px) rotateY(-60deg) rotateX(19.5deg);
+}
+
+
+.le1 {
+  border-color: transparent transparent rgb(193, 127, 56);
+  transform-origin: center bottom;
+  transform: translateX(50px) translateY(50px) rotateX(-90deg);
+}
+.le2 {
+  border-color: transparent transparent rgb(241, 204, 162);
+  transform-origin: center bottom;
+  transform: translateX(50px) translateY(50px) rotateX(-19.5deg);
+}
+.le3 {
+  border-color: transparent transparent rgb(255, 195, 131);
+  transform-origin: right bottom;
+  transform: translateX(50px) translateY(50px) rotateY(60deg) rotateX(19.5deg);
+}
+.le4 {
+  border-color: transparent transparent rgb(217, 156, 92);
+  transform-origin: left bottom;
+  transform: translateX(50px) translateY(50px) rotateY(-60deg) rotateX(19.5deg);
+}
+
+
+.re1 {
+  border-color: transparent transparent rgb(193, 127, 56);
+  transform-origin: center bottom;
+  transform: translateX(50px) translateY(50px) rotateX(-90deg);
+}
+.re2 {
+  border-color: transparent transparent rgb(241, 204, 162);
+  transform-origin: center bottom;
+  transform: translateX(50px) translateY(50px) rotateX(-19.5deg);
+}
+.re3 {
+  border-color: transparent transparent rgb(255, 195, 131);
+  transform-origin: right bottom;
+  transform: translateX(50px) translateY(50px) rotateY(60deg) rotateX(19.5deg);
+}
+.re4 {
+  border-color: transparent transparent rgb(217, 156, 92);
+  transform-origin: left bottom;
+  transform: translateX(50px) translateY(50px) rotateY(-60deg) rotateX(19.5deg);
+}
+
+
+
+.chopstick {
+transform-origin: center center 29px;
+position: absolute;
+top:-20%;
+width: 10px;
+height: 400px;
+transform-style: preserve-3d;
+transform: translate(110px, 30px) rotate(3deg) translateZ(42px);
+}
+
+.chopstick div {
+position: absolute;
+width: 100%;
+height: 100%;
+background: #b5794f;
+opacity: 0.9;
+}
+
+
+.chopstick .front  { 
+transform: rotateY(  0deg) translateZ(  5px); 
+}
+.chopstick .back   { 
+transform: rotateY(180deg) translateZ(  5px);
+}
+.chopstick .left   { 
+background: rgb(127, 91, 53);
+transform: rotateY(-90deg) translateZ(  5px); width: 10px; height: 400px; 
+}
+.chopstick .right  { 
+background: #e5ae74;
+transform: rotateY( 90deg) translateZ(  5px); width: 10px; height: 400px;
+}
+.chopstick .top    {
+  background: #ffc680;
+ transform: rotateX( 90deg) translateZ(5px); width: 10px; height: 10px; 
+}
+.chopstick .bottom { 
+background: rgb(127, 91, 53);
+transform: rotateX(-90deg) translateZ(395px); width: 10px; height: 10px; 
+}
+
+
+
+@keyframes rotateTofu {
+0% {
+  transform: rotateX(-10deg) rotateY(0deg) rotate(160deg);
+}
+100% {
+  transform: rotateX(-10deg) rotateY(360deg) rotate(160deg);
+  }
+}
+
+
+.tofu:hover {
+  animation: none; 
+  transform: rotateX(-35deg) rotate(20deg);
+}
+
+
+.tofu:hover .left-ear{
+  transform: scale(0);
+  transition-delay: 1s;
+}
+
+
+.tofu:hover .right-ear{
+  transform: scale(0);
+  transition-delay: 2s;
+}
+
+a:link {
+position:absolute;
+color: orange;
+font-size: 25px;
+left:5%;
+bottom: 5%;
+ }
+
+a:hover {
+color: rgb(255, 242, 122);
+}
+

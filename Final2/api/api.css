@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #b45555;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/bg.jpg');
+    background-size: 100% 100%;
+}
+
+.container {
+    background-color: #fff9ea;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 50px;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: #2885ea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #226cba;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#sentence-display p {
+    font-size: 20px;
+    line-height: 2;
+    margin-top: 20px;
+    color: #895856;
+    font-weight: 400;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+#history {
+    line-height: 2;
+    margin-top: 30px;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#history h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* History list styling */
+#history ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#history li {
+    background-color: #eee5db;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color:  #895856;
+    transition: background-color 0.2s ease;
+}
+
+#history li:hover {
+    background-color: #e4d4cc;
+}
+
+#clear-history-btn {
+    background-color: #ec6e7b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#clear-history-btn:hover {
+    background-color: #d75965;
+}
+
+#clear-history-btn:active {
+    transform: translateY(1px);
+}
+
+
+footer{
+    font-size: 20px;
+    color: #e56d95;
+    font-weight: bold;
+    position: absolute;
+    left: 40%;
+    bottom: 10px;
+    }

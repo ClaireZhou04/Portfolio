@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Tofu</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=DynaPuff:wght@400..700&family=Yuji+Mai&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="bg.png">
+    <audio id="eat-sound" src="eat.mp3"></audio>
+    <h1>Tofu Skewer</h1>
+  <div class="scene">
+    <div class="tofu" onmouseover="startAudioWithDelay()" 
+    onmouseleave="cancelAudio()">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div> 
+
+        <div class="tofu2 left-ear">
+            <div class="le1"></div>
+            <div class="le2"></div>
+            <div class="le3"></div>
+            <div class="le4"></div> 
+        </div>
+        <div class="tofu2 right-ear">
+        <div class="re1"></div>
+        <div class="re2"></div>
+        <div class="re3"></div>
+        <div class="re4"></div> 
+        </div>
+
+
+      <div class="chopstick">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script>
+    let audioTimeout; 
+  
+    function startAudioWithDelay() {
+      audioTimeout = setTimeout(() => {
+        let sound = document.getElementById('eat-sound');
+        sound.currentTime = 0; 
+        sound.play();
+      }, 1000); 
+    }
+  
+    function cancelAudio() {
+      clearTimeout(audioTimeout);
+    }
+  </script>
+
+
+<a href="../index.html">Back</a>
+</body>
+</html>

@@ -1,0 +1,142 @@
+@media screen and (max-width:975px) {
+    main .item .row .text div{
+        margin:7px 0px !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    main .item .box a{
+        display: block;
+        width: 100%;
+        word-break: break-all;
+    }
+
+    main .item .row {
+        flex-direction: column;
+    }
+
+    main .item .row>div:nth-child(-n+2){
+        margin: 0px!important;
+    }
+
+    main .item .row:first-child div:nth-child(2) span{
+        width: unset!important;
+        height:unset!important;
+    }
+
+    main .item .row .text{
+        padding: 0px 10px!important;
+    }
+
+    main .item .row:last-child div:last-child{
+        width: 100%;
+        margin: 20px 0px!important;
+    }
+
+}
+
+main .item{
+    overflow: hidden;
+}
+
+main .item .row{
+    display: flex;
+    margin: 30px 0px;
+}
+
+
+main .item .row>div{
+    flex: 1;
+    text-align: center;
+}
+
+main .item .row>div:first-child{
+    background: #000;
+}
+
+main .item .row>div:nth-child(-n+2){
+    margin-right: 20px;
+}
+
+
+main .item .row:first-child div:nth-child(2){
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main .item .row:first-child div:nth-child(2) span{
+    width: 49%;
+    height: 49%;
+    padding: 1%;
+    box-sizing: border-box;
+    background: black;
+}
+
+main .item .row:first-child div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+}
+
+main .item .row:first-child div:nth-child(3) span{
+    width: 49%;
+}
+
+main .item .row:last-child .box:first-child{
+    height: 300px;
+}
+
+main .item .row:last-child div:last-child{
+    display: flex;
+    margin-right: 0px;
+}
+
+main .item .row:last-child div:last-child span:first-child{
+    flex: 1.5;
+    margin-right: 20px;
+    margin-right: 20px;
+    min-width: 50%;
+}
+
+main .item .row .text{
+    display: flex;
+    flex-direction: column!important;
+    width: 20%;
+    padding:10px 20px;
+    border: 2px dashed #ccc;
+}
+
+main .item .row .text div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 20px;
+}
+
+
+main .item .row .text p{
+    display: flex;
+    flex-direction: column;
+}
+
+main .item .row .text h5{
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom:10px;
+}
+
+main .item .row .text p,main .item .row .text p a{
+    display: block;
+    text-align: justify;
+    font-size: 16px;
+    word-break: break-all;
+    line-height: 1.3;
+    margin: 4px 0px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+

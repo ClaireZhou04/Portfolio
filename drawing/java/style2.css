@@ -1,0 +1,121 @@
+body {
+    background-image: url('media/bg1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1{
+    position: absolute;
+    margin: 10px;
+    top:5%;
+    font-size: 40px;
+    font-family: "DynaPuff", serif;
+    color:rgb(255, 98, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.365);
+}
+
+a{
+    position: absolute;
+    margin: 10px;
+    bottom:5%;
+    right:25%;
+    font-size: 30px;
+    font-family: "DynaPuff", serif;
+    font-weight: 500;
+    color:rgb(255, 68, 255);
+}
+
+.juice-container {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-30%, -55%);
+    width: 150px;
+    height: 250px;
+    z-index: 1;
+    transition: transform 0.2s ease-out;
+}
+
+
+svg {
+    width: 150%;
+    height: 150%;
+}
+
+#juice {
+    margin-top: -10px;
+    fill: url(#gradient1);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.girl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 105vh;
+    width: auto;
+    z-index: 2; 
+}
+
+
+img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    a {
+        font-size: 35px;
+        right: 10%;
+    }
+    
+    .juice-container {
+        width: 100px;
+        height: 150px;
+    }
+    
+    .girl {
+        height: 600px;
+    }
+}
+
+@media (min-width: 769px) {
+    h1 {
+        font-size: 45px;
+    }
+    
+    a {
+        font-size: 35px;
+        right: 5%;
+    }
+    
+    .juice-container {
+        width: 100px;
+        height: 180px;
+    }
+    
+    .girl {
+        transform: translate(-50%, -47%);
+        height: 850px;
+    }
+}

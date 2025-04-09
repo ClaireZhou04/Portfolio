@@ -1,0 +1,132 @@
+
+body { 
+  font-family: "DynaPuff", system-ui;
+  font-size:22px;
+  font-weight: 400;
+  word-spacing: 5px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  color:rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+
+  background-image: url('../images/bg.jpg');
+  background-size: 100% 100%;
+
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(106, 99, 239, 0.2);
+}
+
+h1 {
+  font-family: "DynaPuff", system-ui;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #e56d95;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  
+  .token {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px; 
+    position: relative;
+  }
+  
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; 
+    transition: transform 0.3s;
+    border-radius: 50%;
+  }
+  
+  .front {
+    background-image: url('Images/pokeball.png');
+    background-size: cover;
+  }
+  
+  .back {
+    background-size: cover;
+    visibility: hidden; 
+  }
+  
+  .token.uncovered .front {
+    transform: rotateY(180deg);
+    
+   
+  }
+  
+  .token.uncovered .back {
+    visibility: visible;
+    
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .back-button {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    padding: 15px 30px;
+    background-color: #e17096;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .back-button:hover {
+    background-color: #c04c73;
+    transform: scale(1.1);
+  }
+  
+  button{
+    border-radius: 8px;
+    padding: 6px 6px;
+    border: none;
+    font-size: 1rem; 
+    background-color: #5684d9;
+    color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  button:hover{
+    background-color: #3d67bb;
+    transform: scale(1.1); 
+  }
+
+  footer{
+    font-size: 20px;
+    color: #e56d95;
+    font-weight: bold;
+    position: absolute;
+    left: 40%;
+    bottom: 10px;
+    }
+
+
+    

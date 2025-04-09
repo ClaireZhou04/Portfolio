@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+        #play_again {
+                display: none;
+            }
+        
+        img:hover{
+            background-color:rgba(255,255,0,0.5);
+        }
+        #g1{
+            position:absolute;
+            left:0px;
+            top:310px;
+        }
+
+        #g2{
+            position:absolute;
+            left:250px;
+            top:310px;
+        }
+
+        #g3{
+            position:absolute;
+            left:500px;
+            top:310px;
+        }
+
+        #left {
+                  float: left;
+                  position: relative;
+                  box-sizing: border-box;
+                  
+              }            
+              #right {
+                  position:absolute;
+                  left:790px;
+                  box-sizing: border-box;
+              }
+      </style>
+
+</head>
+<body>
+<div id="left">
+<img width=74% src="./images/background.png">
+<img id="g1" src="./images/grass.png">
+<img id="g2" src="./images/grass.png">
+<img id="g3" src="./images/grass.png">
+
+
+
+</div>
+
+<div id="right">
+<h1>Gotta Catch 'em All!</h1>
+<p>Your goal in this game is to earn as many Pokeballs as possible while catching a variety of Pokemon along the way.</p>
+
+    <p>To play simply click on one of the three grass clumps in the forest. Behind one of those grass clumps is a Pokemon that can be caught. Behind
+    
+    another grass clump are two free Pokeballs that you can use to try again, and behind the last grass clump is nothing.</p>
+    
+    <p>Note that each time you pick a grass clump you will be using one of your Pokeballs, and when you run out the game will be over!</p>
+    
+    <h2 id="progress">Your Progress so far ...</h2>
+    
+    <p>Pokeballs left: <span id="chances_left">5</span></p>
+    
+    <p>Pokemon caught: <span id="caught">0</span></p> 
+
+    <button id="play_again">Play Again</button>
+    </br>
+    
+    <p>History</p>
+    <p id="history"></p>
+    
+    <button id="clean">Clean Record</button>
+    <p></p>
+    <p></p>
+    <button id="Restart">Start Over</button>
+</div>
+
+<script src="macro3.js"></script>
+</body>
+</html>

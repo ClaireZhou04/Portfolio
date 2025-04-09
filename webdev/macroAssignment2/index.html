@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macro Assignment 2</title>
+    <link rel="stylesheet" href="macro2.css">
+</head>
+<body>
+    <img id="bg" src="./images/backgrounds/night.png">
+    <img id = "hd" src="./images/heads/head1.png">
+    <img id = "bd" src="./images/bodies/body1.png">
+    <h1 id="title">Everything is Awsome</h1>
+    <h2 id="datetime">The time is currently XX:YY am</h2>
+    <h3 id = "luk">Your three lucky numbers today are</h3>
+
+<script>
+
+    const words = ['Awesome', 'Fantastic', 'Fabulous', 'Superb', 'Perfect', 'Brilliant', 'Coming up Roses'];
+    let index = parseInt(Math.random()*words.length);
+    const h1 = document.getElementById("title");
+    h1.innerHTML="<span>Everything is "+ words[index]+"</span>";
+
+  var now = new Date();
+  var hours = now.getHours();
+  var datetime = now.toLocaleString();
+
+  console.log(now);
+  console.log(hours);
+  console.log(datetime);
+    if(hours>=0 || hours<6 && hours==24){
+    document.getElementById("datetime").innerHTML = "<span> The time is currently " + datetime +", Good Night!</span>";
+        }else if(hours>=6 && hours<12){
+            document.getElementById("datetime").innerHTML = "<span> The time is currently " +datetime +", Good Morning!</span>";
+            document.getElementById("bg").src="./images/backgrounds/morning.png";
+        }else if(hours>=12 && hours<18){
+            document.getElementById("datetime").innerHTML = "<span> The time is currently " +datetime +", Good Afternoon!</span>";
+            document.getElementById("bg").src="./images/backgrounds/afternoon.png";
+        }else if(hours>=18 && hours<24){
+            document.getElementById("datetime").innerHTML = "<span> The time is currently " +datetime +", Good Evening!</span>";
+            document.getElementById("bg").src="./images/backgrounds/evening.png";
+        }
+
+    //change the head
+    let chance = parseInt( Math.random() * 6 );
+    if (chance == 0) {
+        document.getElementById("hd").src="./images/heads/head1.png";
+    }
+    else if (chance == 1) {
+        document.getElementById("hd").src="./images/heads/head2.png";
+    }
+    else if (chance == 2) {
+        document.getElementById("hd").src="./images/heads/head3.png";
+    }
+    else if (chance == 3) {
+        document.getElementById("hd").src="./images/heads/head4.png";
+    }
+    else if (chance == 4) {
+        document.getElementById("hd").src="./images/heads/head5.png";
+    }
+    else if (chance == 5) {
+        document.getElementById("hd").src="./images/heads/head6.png";
+    }
+
+    //change the body
+    let chance2 = parseInt( Math.random() * 6 );
+    if (chance2 == 0) {
+        document.getElementById("bd").src="./images/bodies/body1.png";
+    }
+    else if (chance2 == 1) {
+        document.getElementById("bd").src="./images/bodies/body2.png";
+    }
+    else if (chance2 == 2) {
+        document.getElementById("bd").src="./images/bodies/body3.png";
+    }
+    else if (chance2 == 3) {
+        document.getElementById("bd").src="./images/bodies/body4.png";
+    }
+    else if (chance2 == 4) {
+        document.getElementById("bd").src="./images/bodies/body5.png";
+    }
+    else if (chance2 == 5) {
+        document.getElementById("bd").src="./images/bodies/body6.png";
+    }
+
+    let number = parseInt(prompt("Choose a number greater than or equal to 3"));
+    
+    function Test(){
+    if (isNaN(number)== true ||number<=2) {
+        number = parseInt(prompt("Rechoose a number greater than or equal to 3!"));
+        Test();
+    }
+    }
+    Test();
+    
+    let num1 = parseInt( Math.random() * number + 1 );
+    let num2 = parseInt( Math.random() * number + 1 );
+
+    function ReRandom(){
+        if(num2==num1){
+        num2 = parseInt( Math.random() * number + 1 );
+        ReRandom();
+       }
+    }
+    ReRandom();
+
+    let num3 = parseInt( Math.random() * number + 1 );
+
+    function ReRandom2(){
+        if(num3==num1 || num2==num3){
+        num3 = parseInt( Math.random() * number + 1 );
+        ReRandom2();
+       }
+    }
+    ReRandom2();
+
+    document.getElementById("luk").innerHTML = "<span>Your three lucky numbers today are " + num1 +", " +num2 +" and " +num3 +"</span>";
+
+</script>
+
+</body>
+
+</html>

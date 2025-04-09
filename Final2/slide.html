@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Left Page</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Yuji+Mai&display=swap" rel="stylesheet">
+</head>
+<style>
+  iframe{
+    margin-top:15px;
+    margin-left:5em;
+    margin-right:5em;
+    
+  }
+
+  body{
+    background-image: url('images/bg.jpg');
+    background-size: 100% 120%;
+
+  }
+  
+</style>
+<body>
+  <h1>Claire's Little Garden</h1>
+  <audio id="bg-music" src="images/bg.mp3" loop></audio>
+    <div id="music-toggle">
+      <img id="toggle-btn" src="images/voice1.png" alt="Toggle Music">
+    </div>
+  </br>
+  <p>These are two games I made in p5.js (Refresh the page if you want to start over)</p>
+  <p>There are games from my project The Secret Notebook, if you want to know more, click <a href="https://i6.cims.nyu.edu/~xz4437/SecretNotebook/">here</a></p>
+  <p>The left one is a sliding puzzle, and the right one is a draw guessing game using ML5 imageClassifier.</p>
+  <p>Try drawing with your mouse and let the AI mom recognize what you've drawn!</p>
+  <div class="garden">
+    <iframe 
+      width="400" 
+      height="500" 
+      src="https://editor.p5js.org/xz4437/full/spXWMQj6Z" 
+      title="Slide puzzle" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; camera; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+    <iframe 
+    width="400" 
+    height="560" 
+    src="https://editor.p5js.org/xz4437/full/TKegwaMGB" 
+    title="Slide puzzle" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; camera; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+  </div>
+  <button class="back-button" onclick="location.href='index.html'">Back to Garden</button>
+</body>
+<script src="main.js"></script>
+<footer>Produced by Claire Zhou</footer>
+</html>

@@ -1,0 +1,48 @@
+body{url(http://127.0.0.1:3000/webdev/macroAssignment2/index.html)
+}
+h1{
+    color:white;
+    position:absolute;
+    margin:20px;
+    font-size:50px;
+}
+
+h2{
+    font-size:18px;
+    color:black;
+    border-radius: 20px;
+    padding:20px;
+    background-color:white;
+    position:absolute;
+    top:100px;
+    margin:20px;
+    
+}
+h3{
+    font-size:18px;
+    color:black;
+    border-radius: 20px;
+    position:absolute;
+    top:160px;
+    margin:20px;
+    padding:20px;
+    background-color:white;
+    
+}
+#bg{
+    position:absolute;
+    height:890px;
+}
+
+#bd{
+    position:absolute;
+    bottom:0px;
+    right:700px;
+
+}
+
+#hd{
+    position:absolute;
+    bottom:278px;
+    right:775px
+}

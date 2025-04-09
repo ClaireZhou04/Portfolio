@@ -1,0 +1,169 @@
+body {
+    background-image: url('images/corkboard.jpg');
+    font-family: sans-serif;
+}
+
+#header {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 0px black;
+}
+
+#filter {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#panel_item_container {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 10px; 
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+#button_add {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#filter_completed {
+    margin-left: 10px;
+}
+
+.panel {
+    width: 300px;
+    height: 280px;
+    background-color: #fff;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+#button_add:hover {
+    transform: scale(1.1);
+}
+
+.tile:hover .delete-button {
+    display: block;
+}
+
+
+.tile {
+    width: 190px;
+    height: 180px;
+    margin-right: 10px;
+    position: relative;
+    background-color: lightblue;
+    text-align: center;
+    padding-top: 45px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size:25px;
+    box-sizing: border-box;
+}
+
+
+.complete-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+.delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+}
+
+
+.description-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.description-popup .popup-content {
+    text-align: center;
+}
+
+.description-popup button {
+    margin-top: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.description-popup button:hover {
+    background-color: #d32f2f;
+}
+
+.completed {
+    background-color: lightgreen; 
+    text-decoration: line-through;
+}
+
+
+.tile.winter {
+    background-color: #4f94cd;  
+    color: white;
+}
+
+.tile.spring {
+    background-color: #7ed957; 
+    color: white;
+}
+
+.tile.summer {
+    background-color: #fbc02d;  
+    color: white;
+}
+
+.tile.fall {
+    background-color: #e65100;  
+    color: white;
+}
+

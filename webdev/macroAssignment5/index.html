@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="header">Claire's Seasonal To-Do List</h1>
+    <select id="filter">
+        <option value="all">Show All Seasons</option>
+        <option value="winter">Winter</option>
+        <option value="spring">Spring</option>
+        <option value="summer">Summer</option>
+        <option value="fall">Fall</option>
+        <option value="Un-completed">Un-completed</option>
+        <option value="Completed">Completed</option>
+    </select>
+    <img id="button_add" src="images/add_button.png" alt="Add Button" width="50">
+
+    <div id="panel_add_new_item" class="panel hidden">
+        <h2>Add New Item</h2>
+        <form>
+            <div>
+                <label for="item_title">Title</label><br>
+                <input type="text" id="item_title">
+            </div>
+            <div>
+                <label for="item_category">Category</label><br>
+                <select id="item_category">
+                    <option value="winter">Winter</option>
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="fall">Fall</option>
+                </select>
+            </div>
+            <div>
+                <label for="item_description">Description</label><br>
+                <textarea id="item_description"></textarea>
+            </div>
+            <div>
+                <button id="item_add">Add</button>
+                <button id="item_cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="panel_item_container"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

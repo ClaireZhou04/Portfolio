@@ -1,0 +1,24 @@
+@font-face{
+
+	font-family: YoungSerif;
+	src:url(./Fonts/YoungSerif/YoungSerif-Regular.ttf);
+}
+
+h1{
+   font-family: YoungSerif;
+  font-size: 5em;
+  color:seagreen;
+}
+
+body{
+
+	background-image: url('./graphics/06.jpg');
+	clear:both;
+	text-align: left;
+
+  font-family: YoungSerif;
+  font-size: 20px;
+}
+
+
+

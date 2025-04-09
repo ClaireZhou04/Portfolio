@@ -1,0 +1,58 @@
+body{
+    color:white;
+    background-color: black;
+    text-align: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  
+  .token {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px; 
+    position: relative;
+  }
+  
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; 
+    transition: transform 0.3s;
+    border-radius: 50%;
+  }
+  
+  .front {
+    background-image: url('Images/pokeball.png');
+    background-size: cover;
+  }
+  
+  .back {
+    background-size: cover;
+    visibility: hidden; 
+  }
+  
+  .token.uncovered .front {
+    transform: rotateY(180deg);
+    
+   
+  }
+  
+  .token.uncovered .back {
+    visibility: visible;
+    
+  }
+  
+  .hidden {
+    display: none;
+  }

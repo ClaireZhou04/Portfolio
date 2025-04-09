@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Clothes Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to Claire's Online Clothes Store!</h1>
+    <form id="shoppingCartForm">
+
+        <div class="product">
+            <h2>T-Shirt</h2>
+            <img src="shirt.png" alt="T-Shirt" width="150">
+            <p>Price: $35.00 </p>
+            <label for="shirtQuantity">Quantity:</label>
+            <input type="number" id="shirtQuantity" name="shirtQuantity" min="0" value="0">
+        </div>
+
+        <div class="product">
+            <h2>Jeans</h2>
+            <img src="jeans.png" alt="Jeans" width="150">
+            <p>Price: $50.00 </p>
+            <label for="jeansQuantity">Quantity:</label>
+            <input type="number" id="jeansQuantity" name="jeansQuantity" min="0" value="0">
+        </div>
+
+        <h3>Customer Information</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+        <label for="zip">ZIP Code:</label>
+        <input type="text" id="zip" name="zip" maxlength="5" required>
+
+        <h3>Shipping Method</h3>
+        <input type="radio" id="willCall" name="shipping" value="Will-Call" required>
+        <label for="willCall">Will-Call ($0)</label>
+        <input type="radio" id="shipping" name="shipping" value="Shipping" required>
+        <label for="shipping">Shipping ($10)</label>
+
+        <h3>Payment Information</h3>
+        <label for="creditCard">Credit Card:</label>
+        <input type="text" id="creditCard" name="creditCard" maxlength="16" required>
+        <label for="expiration">Expiration Date:</label>
+        <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required>
+
+        <h3>Order Summary</h3>
+        <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        <p>Shipping Cost: $<span id="shippingCost">0.00</span></p>
+        <p>Grand Total: $<span id="grandTotal">0.00</span></p>
+
+        <button type="button" id="resetBtn">Reset</button>
+        <button type="submit">Checkout</button>
+    </form>
+
+    <script src="asg6cart.js"></script>
+</body>
+<footer>Produced by Claire Zhou</footer>
+</html>

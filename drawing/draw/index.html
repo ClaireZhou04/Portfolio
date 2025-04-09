@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Video Switch</title>
+  <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=DynaPuff:wght@400..700&family=Yuji+Mai&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <audio controls>
+    <source src="../media/bg.mp3" type="audio/ogg">
+  </audio>
+
+  <div id="container">
+
+    <!-- Video for Light Mode -->
+    <video id="video-light" autoplay muted loop playsinline>
+      <source src="../media/brightBG.mp4" type="video/mp4">
+    </video>
+
+    <!-- Video for Dark Mode -->
+    <video id="video-dark" autoplay muted loop playsinline style="display: none;">
+      <source src="../media/darkBG.mp4" type="video/mp4">
+    </video>
+
+    <img id="pic-light" src="../media/bg.jpg">
+    <img id="pic-dark" src="../media/bg2.jpg">
+  </div>
+
+  <div class="words">
+  <h1 id="title">Claire Zhou Drawing on the Web</h1>
+  <h2>Welcome to my portfolio page!</h2>
+
+  <a href="../index.html">Back</a>
+  </div>
+
+  <div class="grid">
+    <img class="a" src="../media/Ghost0.gif">
+    <img class="b" src="../media/Pumpkin1.gif">
+    <img class="c" src="../media/Pumpkin2.gif">
+  </div>
+
+</body>
+
+
+<script>
+  // function to update video based on the color scheme
+  function updateVideo() {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    const lightVideo = document.getElementById('video-light');
+    const darkVideo = document.getElementById('video-dark');
+    const lightPic = document.getElementById('pic-light');
+    const darkPic = document.getElementById('pic-dark');
+    const h1= document.getElementById('title');
+
+    if (isDarkMode) {
+      lightVideo.style.display = 'none';
+      lightVideo.pause();
+
+      darkVideo.style.display = 'block';
+      darkVideo.play();
+      darkPic.style.display="";
+      lightPic.style.display = 'none';
+      h1.style.display="";
+    } else {
+  
+      darkVideo.style.display = 'none';
+      darkVideo.pause();
+
+      lightVideo.style.display = 'block';
+      lightVideo.play();
+      lightPic.style.display="";
+      darkPic.style.display = 'none';
+      h1.style.display="";
+    }
+  }
+
+  // listen for changes in color scheme
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateVideo);
+  // initial check
+  updateVideo();
+</script>
+
+</html>

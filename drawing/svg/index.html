@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=DynaPuff:wght@400..700&family=Yuji+Mai&display=swap" rel="stylesheet">
+  
+  <title>Icon Display</title>
+  <style>
+    body {
+      font-family: "DynaPuff", serif;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 200px;
+      padding: 20px;
+      justify-content: center;
+      font-size: 30px;
+    }
+
+    h1{
+      position:absolute;
+      top:46%;
+      font-weight: 500;
+      color: #ff9f38;
+      font-size:40px;
+    }
+    .icon-container {
+      position:relative;
+      top:50px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .icon-label {
+      margin-top: 10px;
+      color: #ff9f38;
+    }
+
+    svg{
+      transition: transform .2s;
+    }
+  svg:hover{
+    transform: scale(1.2)
+  }
+
+  a:link {
+  position:absolute;
+  color: white;
+  left:5%;
+  bottom: 5%;
+   }
+
+  a:hover {
+  color: rgb(255, 180, 217);
+  }
+
+  a:active {
+  color: rgb(199, 98, 188);
+  }
+
+  video{
+    position:fixed;
+    top:0;
+    left:0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+  }
+
+
+  #hat{
+    height: 250px;
+    width: 250px;
+    fill:url(#gradient1);
+    opacity:0.9;
+  }
+
+  #umbrella{
+    margin-top: 10px;
+    height: 230px;
+    width: 230px;
+    fill:url(#gradient4);
+    opacity:0.9;
+  }
+
+  #sunCream{
+    margin-top: 30px;
+    height: 210px;
+    width: 210px;
+    fill:url(#gradient5);
+    opacity:0.9;
+  }
+  #swimRing{
+    margin-top: -5px;
+    height: 250px;
+    width: 250px;
+    fill:url(#gradient3);
+    opacity:0.9;
+  }
+  #juice{
+    margin-top: -10px;
+    height: 230px;
+    width: 230px;
+    fill:url(#gradient2);
+    opacity:0.9;
+  
+  }
+  #galsses{
+    margin-top: -10px;
+    height: 230px;
+    width: 230px;
+    fill:url(#gradient4);
+    opacity:0.9;;
+  }
+
+  #none{
+    width:0;
+    height:0;
+  }
+
+  </style>
+</head>
+<body>
+
+  <video autoplay muted loop playsinline>
+    <source src="../media/brightBG.mp4" type="video/mp4">
+  </video>
+
+  <div class="icon-container">
+    <svg id="hat"><use xlink:href="icons.svg#hat"></use></svg>
+    <div class="icon-label">Hat</div>
+  </div>
+
+  <div class="icon-container">
+    <svg id="umbrella"><use xlink:href="icons.svg#umbrella"></use></svg>
+    <div class="icon-label">Umbrella</div>
+  </div>
+
+  <div class="icon-container">
+    <svg id="sunCream"><use xlink:href="icons.svg#sunCream"></use></svg>
+    <div class="icon-label">Sun Cream</div>
+  </div>
+
+  <div class="icon-container">
+    <svg id="swimRing"><use xlink:href="icons.svg#swimRing"></use></svg>
+    <div class="icon-label">Swim Ring</div>
+  </div>
+<h1>Things you need to prepare before going to the beach!</h1>
+  <div class="icon-container">
+    <svg id="juice"><use xlink:href="icons.svg#juice"></use></svg>
+    <div class="icon-label">Juice</div>
+  </div>
+
+  <div class="icon-container">
+    <svg id="galsses"><use xlink:href="icons.svg#glasses"></use></svg>
+    <div class="icon-label">Sun Glasses</div>
+  </div>
+
+<svg id="none">
+  <defs>
+    <linearGradient id="gradient1">
+      <stop offset="0%" stop-color="yellow" />
+      <stop offset="100%" stop-color="magenta" />
+    </linearGradient>
+
+    <linearGradient id="gradient2">
+      <stop offset="0%" stop-color="cyan" />
+      <stop offset="100%" stop-color="yellow" />
+    </linearGradient>
+
+    <linearGradient id="gradient3">
+      <stop offset="0%" stop-color="magenta" />
+      <stop offset="100%" stop-color="cyan" />
+    </linearGradient>
+
+    <linearGradient id="gradient4">
+      <stop offset="0%" stop-color="cyan" />
+      <stop offset="100%" stop-color="magenta" />
+    </linearGradient>
+
+    <linearGradient id="gradient5">
+      <stop offset="0%" stop-color="magenta" />
+      <stop offset="100%" stop-color="yellow" />
+    </linearGradient>
+  </defs>
+</svg>
+</body>
+</html>
+
+
+<a href="../index.html">Back</a>
