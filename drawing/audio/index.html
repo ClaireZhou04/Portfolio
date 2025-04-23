@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claire Zhou - Web Audio Remix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=DynaPuff:wght@400..700&family=Yuji+Mai&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <canvas id="visualizer"></canvas>
+
+    <video id="video-light" autoplay muted loop playsinline>
+      <source src="../media/brightBG.mp4" type="video/mp4">
+    </video>
+    <video id="video-dark" autoplay muted loop playsinline style="display: none;">
+      <source src="../media/darkBG.mp4" type="video/mp4">
+    </video>
+
+    <img id="pic-light" src="../media/bg.jpg">
+    <img id="pic-dark" src="../media/bg2.jpg">
+  </div>
+
+  <div class="words">
+    <h1 id="title">Claire Zhou Drawing on the Web</h1>
+    <h2>Click anywhere to begin the experience!</h2>
+  </div>
+
+  <div class="grid">
+    <img class="a" src="../media/Ghost0.gif">
+    <img class="b" src="../media/Pumpkin1.gif">
+    <img class="c" src="../media/Pumpkin2.gif">
+  </div>
+
+  <audio id="audio" src="../media/bg.mp3"></audio>
+
+</body>
+</html>
