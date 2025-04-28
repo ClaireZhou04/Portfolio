@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subsoma - AI Assistant</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: linear-gradient(to right, #91a8f0, #d3a7f7);
+      color: #1a1a1a;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    .sign-in {
+      padding: 6px 12px;
+      border: 1px solid #1a1a1a;
+      border-radius: 6px;
+    }
+
+    main {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #1a1a1a;
+    }
+
+    p.subtitle {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .get-started {
+      background: linear-gradient(to right, #6078ea, #a271f7);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-bottom: 50px;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .feature {
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <strong>Subsoma</strong>
+  </div>
+  <nav>
+    <a href="#">How It Works</a>
+    <a href="#">Pricing</a>
+    <a href="#" class="sign-in">Sign In</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Let an AI handle your everyday tasks</h1>
+  <p class="subtitle">
+    Subsoma acts as your personal AI assistant, taking care of emails, appointments, messages, and more.
+  </p>
+  <button class="get-started">Get Started</button>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">✉️</div>
+      <h3>Email & Communication</h3>
+      <p>Manage your inbox and stay connected</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🗓️</div>
+      <h3>Scheduling</h3>
+      <p>Keep track of your agenda effortlessly</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💬</div>
+      <h3>Social Interaction</h3>
+      <p>Engage with friends and family easily</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+</footer>
+
+</body>
+</html>
