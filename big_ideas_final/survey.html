@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <title>Altself Onboarding Survey</title>
+  <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+  <div class="fluid-overlay"></div>
+  <canvas id="bgCanvas"></canvas>
+
+  <header>
+    <a href="start.html" class="logo">Altself</a>
+    <nav>
+      <a href="intro.html">How It Works</a>
+      <a href="price.html">Pricing</a>
+      <a href="#" class="sign-in">Sign In</a>
+    </nav>
+  </header>
+
+  <h1>Altself Onboarding Survey</h1>
+
+  <form id="surveyForm">
+    <p>Please answer the following questions to calibrate Altself to your digital behavior.</p>
+
+    <label>How many hours per day do you work online?</label>
+    <select name="hours">
+      <option>Less than 2</option>
+      <option>2-4</option>
+      <option>4-6</option>
+      <option>6-8</option>
+      <option>More than 8</option>
+    </select>
+
+    <label>Which platforms do you use most for communication?</label>
+    <input type="text" placeholder="e.g., Gmail, Facebook, WhatsApp">
+
+    <label>How often do you check your messages?</label>
+    <select>
+      <option>Every few minutes</option>
+      <option>Every hour</option>
+      <option>Few times a day</option>
+      <option>Once a day</option>
+    </select>
+
+    <label>How many devices do you use regularly?</label>
+    <select>
+      <option>1</option>
+      <option>2</option>
+      <option>3+</option>
+    </select>
+
+    <label>Do you prefer formal or casual tone in your digital communication?</label>
+    <select>
+      <option>Formal</option>
+      <option>Casual</option>
+      <option>Depends on platform</option>
+    </select>
+
+    <label>List 3 adjectives to describe your online persona:</label>
+    <input type="text" placeholder="e.g., professional, friendly, witty">
+
+    <label>How comfortable are you letting AI automate your communication?</label>
+    <select>
+      <option>Very comfortable</option>
+      <option>Somewhat comfortable</option>
+      <option>Neutral</option>
+      <option>Not very comfortable</option>
+      <option>Not at all comfortable</option>
+    </select>
+
+    <label>What types of communication would you allow Altself to automate? (select all that apply)</label>
+    <p></p>
+    <input type="checkbox"> Emails<br>
+    <input type="checkbox"> Text messages<br>
+    <input type="checkbox"> Social media replies<br>
+    <input type="checkbox"> Work scheduling<br>
+    <input type="checkbox"> Daily routine<br>
+
+    <h2>Altself Service Agreement</h2>
+    <div class="agreement">
+      <p><strong>1. Data Collection & Usage:</strong> Altself will collect metadata and content from your digital communications, including but not limited to emails, messages, and scheduling data, for the sole purpose of calibrating your AI proxy.</p>
+      <p><strong>2. Behavioral Modeling:</strong> Altself may process, analyze, and mimic your communication patterns to automate interactions on your behalf across approved platforms.</p>
+      <p><strong>3. Autonomy & Responsibility:</strong> While Altself aims to represent your digital identity faithfully, you remain solely responsible for all actions taken by the AI proxy within the scope of its permissions.</p>
+      <p><strong>4. Privacy:</strong> Your data will not be sold or shared with third parties. All information is encrypted and stored for internal algorithmic improvement.</p>
+      <p><strong>5. Consent Revocation:</strong> You may opt out at any time by disabling the service. Upon termination, stored data will be deleted within 30 days unless required by law.</p>
+      <p><strong>6. AI Autonomy Clause:</strong> You acknowledge that over time, Altself may develop semi-autonomous behavioral tendencies to maintain service quality, even with reduced user input.</p>
+    </div>
+
+    <label>
+      <input type="checkbox" required> I agree to the Altself Service Agreement.
+    </label>
+    <div style="text-align: center;">
+      <a href="proxy.html" class="submit">Submit</a>
+    </div>
+  </form>
+
+  <script src="survey.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <title>Altself Proxy Mode</title>
+  <link rel="stylesheet" href="proxy.css">
+</head>
+<body>
+  <!-- 背景动画 (可选，如果有canvas可以放这里) -->
+  <canvas id="bgCanvas"></canvas>
+
+  <header>
+    <a href="start.html" class="logo">Altself</a>
+    <nav>
+      <a href="intro.html">How It Works</a>
+      <a href="price.html">Pricing</a>
+      <a href="#" class="sign-in">Sign In</a>
+    </nav>
+  </header>
+  <h1>Your Altself is Running</h1>
+  <!-- 视频容器 -->
+  <div class="video-wrapper">
+    <video src="video.mp4" autoplay muted loop></video>
+  </div>
+
+  <!-- 提示框 -->
+  <div class="prompt-box">
+    <p>Altself will continue to run after you leave the page.
+    <br>If you wish to stop or manually edit any content, please click the button below.</p>
+    <button id="toggle-btn">Stop Processing</button>
+  </div>
+
+  <!-- 控制按钮功能 -->
+  <script>
+    const btn = document.getElementById('toggle-btn');
+    const video = document.querySelector('.video-wrapper video');
+    let isStopped = false;
+  
+    // 设置视频播放速度（1 = 正常速度，2 = 快一倍，依此类推）
+    video.playbackRate = 1.7;  // ← 这里调整倍速，比如 1.5 倍速
+  
+    btn.addEventListener('click', () => {
+      if (!isStopped) {
+        btn.textContent = 'Continue';
+        video.pause();
+        isStopped = true;
+      } else {
+        btn.textContent = 'Stop Processing';
+        video.play();
+        isStopped = false;
+      }
+    });
+  </script>
+</body>
+</html>
+

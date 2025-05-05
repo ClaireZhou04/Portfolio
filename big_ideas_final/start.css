@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quantico", sans-serif;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.get-started {
+  display: inline-block;
+  margin-top: 10px;
+  background: linear-gradient(to right, #516eff, #a978ff);
+  color: white;
+  padding: 13px 27px;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.get-started:hover {
+  transform: scale(1.1);  
+}
+
+.fluid-overlay {
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 120vw;
+  height: 120vh;
+  background: linear-gradient(120deg, #ffff00, #cd81ff, #393488, #9ae1ff, #ff72ea);
+  background-size: 200% 200%;
+  background-size: 200% 200%;
+  animation: animateFlow 13s ease infinite;
+  filter: url(#fluid);
+  opacity: 1;
+  z-index: -2;
+}
+
+.fluid-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.253);  /* 20% 透明黑 */
+}
+
+@keyframes animateFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+canvas#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  margin-left: 50px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.sign-in {
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.sign-in:hover{
+  transform: scale(1.1); 
+}
+
+.logo {
+  text-decoration: none;
+  color:white;
+  font-size:30px;
+  font-style: italic;
+}
+
+main {
+  text-shadow: 0 0 10px #00000066;
+  text-align: center;
+  margin-top: 200px;
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+p.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.feature {
+  text-align: center;
+  max-width: 200px;
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+footer {
+  height: 50px;
+  z-index: 1;
+  position: relative;
+}

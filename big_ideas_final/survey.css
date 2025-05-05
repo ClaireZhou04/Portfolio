@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+    padding-top: 0px;
+    font-family: "Quantico", sans-serif;
+    color: white;
+    height: 100vh;
+    background: linear-gradient(135deg,  #ffff00, #fca4ef, #9ae1ff, #7069d1, #ce9bf0);
+    background-size: 200% 300%;
+    animation: bgFlow 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;  /* 控制 header 和 form 间距 */
+  }
+
+  .overlay {
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 120vw;
+    height: 120vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+
+  canvas#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+  }
+
+  header {
+    padding-top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 40px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+  }
+  
+  nav {
+    margin-left: 50px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .sign-in {
+    padding: 6px 12px;
+    border: 1px solid white;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sign-in:hover{
+    transform: scale(1.1); 
+  }
+  
+  .logo {
+    text-decoration: none;
+    color:white;
+    font-size:30px;
+    font-style: italic;
+  }
+
+  @keyframes bgFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  
+  h1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 35px;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00000088;
+  }
+  
+  form#surveyForm {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 10px;
+    width: 60vw;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  
+  p {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box; 
+  }
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .consent {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .submit {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-family: "Quantico", sans-serif;
+    background: linear-gradient(to right, #6078ea, #a271f7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 120px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+  }
+   
+  .submit:hover {
+    background: linear-gradient(to right, #a271f7, #6078ea);
+  }
+  
+
+  .agreement {
+    max-height: 150px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+  }
+

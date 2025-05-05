@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Quantico", sans-serif;
+    color: white;
+    height: 100vh;
+    background: linear-gradient(135deg, #661b8c, #50bae8, #cd4a6d);
+    background-size: 200% 200%;
+    animation: bgFlow 10s ease infinite;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  @keyframes bgFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  canvas#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  header {
+    margin-top: 14px;
+    padding-top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 40px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+  }
+  
+  nav {
+    margin-left: 50px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .sign-in {
+    padding: 6px 12px;
+    border: 1px solid white;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sign-in:hover{
+    transform: scale(1.1); 
+  }
+
+  .logo {
+    text-decoration: none;
+    color:white;
+    font-size:30px;
+    font-style: italic;
+  }
+
+
+  .video-wrapper {
+    width: 90vw;
+    height: 80vh;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+  
+  .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px);
+  }
+  
+  .prompt-box {
+    position: absolute;
+    bottom: 100px;
+    background: rgba(0, 0, 0, 0.596);
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  }
+  
+  .prompt-box p {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  
+  .prompt-box button {
+    background: linear-gradient(to right, #6078ea, #a271f7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .prompt-box button:hover {
+    background: linear-gradient(to right, #a271f7, #6078ea);
+    transform: scale(1.05);
+  }
+  

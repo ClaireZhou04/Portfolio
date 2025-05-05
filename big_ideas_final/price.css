@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: "Quantico", sans-serif;
+    background: linear-gradient(120deg, #ffff00bf, #cd81ffbf, #3a3488cd, #9ae1ffc4, #ff72eac9);
+    background-size: 200% 200%;
+    animation: bgFlow 13s ease infinite;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 0px;
+  }
+  
+  @keyframes bgFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  header {
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 40px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+  }
+  
+  nav {
+    margin-left: 50px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .sign-in {
+    padding: 6px 12px;
+    border: 1px solid white;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sign-in:hover {
+    transform: scale(1.1);
+  }
+  
+  .logo {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+  }
+  
+  /* --- pricing cards --- */
+  .pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 10em;
+  }
+  
+  .plan {
+    background: rgba(0, 0, 0, 0.525);
+    padding: 30px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 380px; /* 保证高度一致 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .plan:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  }
+  
+  .plan h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+  }
+  
+  .plan .price {
+    font-size: 1.4em;
+    margin: 15px 0;
+    font-weight: bold;
+  }
+  
+  .plan p {
+    margin: 8px 0;
+  }
+  
+  .button-wrapper {
+    margin-top: auto;
+  }
+  
+  button {
+    background: linear-gradient(to right, #6078ea, #a271f7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #a271f7, #6078ea);
+  }
+  
