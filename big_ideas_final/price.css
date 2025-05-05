@@ -1,4 +1,5 @@
 body {
+  line-height: 1.3em;
     margin: 0;
     font-family: "Quantico", sans-serif;
     background: linear-gradient(120deg, #ffff00bf, #cd81ffbf, #3a3488cd, #9ae1ffc4, #ff72eac9);
