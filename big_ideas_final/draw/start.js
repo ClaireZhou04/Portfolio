@@ -1,4 +1,5 @@
 
+// 气泡背景动画
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -30,7 +31,6 @@ function animate() {
 
     bubble.x += bubble.dx;
     bubble.y += bubble.dy;
-
     if (bubble.x + bubble.radius > canvas.width || bubble.x - bubble.radius < 0) bubble.dx *= -1;
     if (bubble.y + bubble.radius > canvas.height || bubble.y - bubble.radius < 0) bubble.dy *= -1;
   }
@@ -45,22 +45,16 @@ window.addEventListener('resize', () => {
 
 // 拖拽图标（原有功能）
 const icons = document.querySelectorAll('.feature-icon');
-const gravity = 0.5;
-const bounce = 0.7;
 icons.forEach(icon => {
   let isDragging = false;
   let offsetX, offsetY;
-  let velocityX = 0, velocityY = 0;
   let posX = icon.offsetLeft, posY = icon.offsetTop;
-
   icon.addEventListener('mousedown', e => {
     isDragging = true;
     offsetX = e.clientX - posX;
     offsetY = e.clientY - posY;
     icon.style.animation = 'none';
-    velocityX = velocityY = 0;
   });
-
   document.addEventListener('mousemove', e => {
     if (isDragging) {
       posX = e.clientX - offsetX;
@@ -70,27 +64,25 @@ icons.forEach(icon => {
       icon.style.top = `${posY}px`;
     }
   });
-
   document.addEventListener('mouseup', () => {
-    if (isDragging) {
-      isDragging = false;
-      velocityX = (Math.random() - 0.5) * 4;
-      // 可以加入落下逻辑
-    }
+    if (isDragging) isDragging = false;
   });
 });
 
-// ===== 新增：Logo 连续点击触发故障并返回 =====
+// ===== 新增：Logo 连续点击触发父页面故障音效 + 故障画面 + 返回 =====
 const logo = document.querySelector('.logo');
 let clickCount = 0;
 
-// 创建故障画布
 document.addEventListener('DOMContentLoaded', () => {
+  // 创建故障画布
   const glitchCanvas = document.createElement('canvas');
   glitchCanvas.id = 'glitchCanvas';
+  glitchCanvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;opacity:0;z-index:9999;transition:opacity 0.2s ease;';
   document.body.appendChild(glitchCanvas);
   const glitchCtx = glitchCanvas.getContext('2d');
-
+  // 音效：调用父文件夹 bug.mp3
+  const glitchSound = new Audio('../bug.mp3');
+  
   function resizeGlitch() {
     glitchCanvas.width = window.innerWidth;
     glitchCanvas.height = window.innerHeight;
@@ -102,6 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     clickCount++;
     if (clickCount >= 10) {
+      // 播放父页面故障音效
+      glitchSound.currentTime = 0;
+      glitchSound.play();
+      // 触发故障画面后返回父页面
       triggerGlitch(() => {
         window.location.href = '../start.html';
       });
@@ -113,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const img = new Image();
       img.src = screenshot.toDataURL();
       img.onload = () => {
-        glitchCanvas.style.opacity = 1;
+        glitchCanvas.style.opacity = '1';
         let frames = 0;
         const maxFrames = 20;
         const id = setInterval(() => {
@@ -137,3 +133,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
