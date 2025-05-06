@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proxy Mode</title>
+  <link rel="stylesheet" href="proxy.css">
+</head>
+<body>
+  <header>
+    <a href="start.html" class="logo">Altself</a>
+  </header>
+  <h1>Your Altself is Running</h1>
+
+  <div class="video-wrapper">
+      <video src="../video.mp4" autoplay muted loop></video>
+  </div>
+
+  <audio id="bgMusic" src="music.mp3" loop></audio>
+  
+  <!-- 生命游戏覆盖层 -->
+  <div id="gameGrid" class="grid"></div>
+
+  <div class="prompt-box">
+    <p>Altself will continue to run after you leave the page.<br>If you wish to stop or manually edit any content, please click the button below.</p>
+    <button id="toggle-btn">Stop Processing</button>
+  </div>
+
+  <script src="proxy.js"></script>
+</body>
+</html>

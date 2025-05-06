@@ -1,0 +1,110 @@
+
+@font-face {
+  font-family: 'Quantico';
+  src: url('fonts/Quantico-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quantico';
+  src: url('fonts/Quantico-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quantico';
+  src: url('fonts/Quantico-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Quantico';
+  src: url('fonts/Quantico-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quantico', sans-serif;
+  color: white;
+  height: 100vh;
+  background: linear-gradient(120deg, #a78c14, #734f8b, #1f215a, #295f76, #7e3672);
+  background-size: 200% 200%;
+  animation: bgFlow 13s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#startAudio {
+  font-family: 'Quantico', sans-serif;
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #6078ea, #a271f7);
+  color: white;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+#startAudio:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* SVG 圆圈 */
+.icon {
+  transform-origin: center center;
+  pointer-events: auto;
+  animation: floatUp 12s forwards;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0vh);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(-200vh);
+    opacity: 0.2;
+  }
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  text-shadow: 0 0 10px #00000066;
+  text-decoration: none;
+  color:white;
+  font-size:30px;
+  font-style: italic;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);  
+}
