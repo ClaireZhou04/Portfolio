@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>甜咸粽子大作战</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.min.js"></script>
+</head>
+<body>
+
+    <audio id="bgm" src="bg.mp3" loop autoplay></audio>
+    <audio id="bing" src="bing.mp3"></audio>
+    <audio id="over" src="over.mp3"></audio>
+
+    <div class="game-container">
+        <img class="bg-image" src="background.png">
+        <div class="zongzi-container">
+            <div class="zongzi sweet">
+                <img src="甜粽子.png">
+                <div class="sweet-score">0</div>
+            </div>
+            <div class="zongzi salty">
+                <img src="咸粽子.png">
+                <div class="salty-score">0</div>
+            </div>
+        </div>
+
+        <div class="question">你觉得我们谁更好吃？</div>
+        <div class="timer">倒计时：30秒</div>
+        <div class="result"></div>
+
+        <button id="start-btn">比赛开始！</button>
+        <button id="restart-btn" style="display:none;">重新开始</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
